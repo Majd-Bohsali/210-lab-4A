@@ -33,12 +33,19 @@ int main() {
         colors.push_back(tempColor); 
     }
 
-    // Outputs well-formatted table of colors 
+    // Outputs color table header
     cout << endl;
-    cout << setw(formatWidth) << "Color#" << setw(formatWidth) << 
+    cout << left << setw(formatWidth) << "Color#" << setw(formatWidth) << 
             "R value" << setw(formatWidth) << "G Value" << setw(formatWidth) << "B Value" << endl; 
-    cout << setw(formatWidth) << "------" << setw(formatWidth) << 
+    cout << left << setw(formatWidth) << "------" << setw(formatWidth) << 
             "-------" << setw(formatWidth) << "-------" << setw(formatWidth) << "-------" << endl; 
+
+    // Outputs color vlaues formated
+    for(int i = 0; i < colors.size(); i++) { 
+        cout << left << setw(formatWidth) << (i+1) << setw(formatWidth) << 
+            colors.at(i).red << setw(formatWidth) << colors.at(i).green << setw(formatWidth) << colors.at(i).blue << endl;
+    }
+
 
     return 0;
 }
