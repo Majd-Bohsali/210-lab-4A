@@ -4,6 +4,7 @@
 #include <vector>
 #include <cstdlib> 
 #include <ctime> 
+#include <iomanip>
 using namespace std; 
 
 // defines Color struct
@@ -19,6 +20,7 @@ int main() {
     const int MIN_N = 25; 
     const int MAX_N = 50; 
     const int MAX_COLOR_INT = 256; 
+    const int formatWidth = 10; 
     vector<Color> colors; 
     int n = rand() % (MAX_N - MIN_N + 1) + MIN_N;
 
@@ -31,7 +33,12 @@ int main() {
         colors.push_back(tempColor); 
     }
 
-
+    // Outputs well-formatted table of colors 
+    cout << endl;
+    cout << setw(formatWidth) << "Color#" << setw(formatWidth) << 
+            "R value" << setw(formatWidth) << "G Value" << setw(formatWidth) << "B Value" << endl; 
+    cout << setw(formatWidth) << "------" << setw(formatWidth) << 
+            "-------" << setw(formatWidth) << "-------" << setw(formatWidth) << "-------" << endl; 
 
     return 0;
 }
