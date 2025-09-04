@@ -46,6 +46,5 @@ int main() {
             colors.at(i).red << setw(formatWidth) << colors.at(i).green << setw(formatWidth) << colors.at(i).blue << endl;
     }
 
-
     return 0;
 }
