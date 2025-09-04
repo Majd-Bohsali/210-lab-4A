@@ -14,10 +14,16 @@ struct Color {
 };
 
 int main() { 
-    vector<Color> colors; 
     srand(time(0));
-    int n = rand() % 50 + 1;
-    cout << n;
+
+    const int MIN_N = 25; 
+    const int MAX_N = 25; 
+    vector<Color> colors; 
+    int n = rand() % (MAX_N - MIN_N + 1) + MIN_N;
+
+    for(int i = 0; i < n; i++) {
+        
+    }
 
     return 0;
 }
