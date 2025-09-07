@@ -26,10 +26,10 @@ int main() {
 
     // generates n random colors
     for(int i = 0; i < n; i++) {
-        int redRand = rand() % MAX_COLOR_INT;
-        int blueRand = rand() % MAX_COLOR_INT;
-        int greenRand = rand() % MAX_COLOR_INT;
-        Color tempColor = {redRand, greenRand, blueRand};
+        Color tempColor;
+        tempColor.red = rand() % MAX_COLOR_INT;
+        tempColor.green = rand() % MAX_COLOR_INT;
+        tempColor.blue = rand() % MAX_COLOR_INT;
         colors.push_back(tempColor); 
     }
 
